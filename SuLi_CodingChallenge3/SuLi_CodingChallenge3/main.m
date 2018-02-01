@@ -49,8 +49,7 @@ int main(int argc, const char * argv[]) {
         int factorial = 10;
         NSLog(@"Factorial of %i is %i",factorial, challenge2(factorial));
         NSLog(@"\n");
-        challenge3(6);
-//        challenge3(arc4random_uniform(10));
+       challenge3(arc4random_uniform(10));
     }
     return 0;
 }
