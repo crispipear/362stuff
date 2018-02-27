@@ -17,7 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.waveView.text = self.wave;
+    NSLog(@"Reciever: %@",self.wave);
     
+}
+
+-(void)didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
 }
 
 

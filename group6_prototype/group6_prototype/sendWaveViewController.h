@@ -8,6 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface sendWaveViewController : UIView
-
+@interface sendWaveViewController : UIViewController <UITextFieldDelegate>
 @end

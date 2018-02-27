@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "WaveView.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *enter;
@@ -36,6 +37,13 @@
     self.tracker = 0;
     self.enter.hidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
+    [self testCustomView];
+}
+- (void)testCustomView
+{
+    CGRect frame = CGRectMake(0, 0, 200, 200);
+    WaveView *testView = [[WaveView alloc] initWithFrame:frame];
+    [self.view addSubview:testView];
 }
 
 @end
