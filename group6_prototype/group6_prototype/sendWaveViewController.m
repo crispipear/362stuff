@@ -18,15 +18,10 @@
 @synthesize waveTF;
 
 - (IBAction)sendWave:(UIButton *)sender {
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        self.sendWaveButton.hidden = NO;
-//    });
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.waveTF.delegate = self;
-//    self.sendWaveButton.hidden = YES;
-    // Do any additional setup after loading the view.
 }
 
 -(void)didReceiveMemoryWarning{
@@ -40,9 +35,9 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     self.wave = self.waveTF.text;
+    NSLog(@"Sender: %@",self.wave);
+
     wavesViewController *waves = segue.destinationViewController;
-//    NSLog(@"segue local: %@",  self.wave);
     waves.wave = self.wave;
-//    NSLog(@"segue foreign: %@",  waves.wave);
 }
 @end

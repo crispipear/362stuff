@@ -7,20 +7,26 @@
 //
 
 #import "wavesViewController.h"
-
+#import "WaveView.h"
 @interface wavesViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *waveView;
+@property (unsafe_unretained, nonatomic) IBOutlet UIScrollView *wavesSV;
 @end
 
 @implementation wavesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.waveView.text = self.wave;
     NSLog(@"Reciever: %@",self.wave);
     
+    [self loadViews];
+    
 }
-
+- (void)loadViews
+{
+    CGRect frame = CGRectMake(0, 0, 200, 200);
+    WaveView *testView = [[WaveView alloc] initWithFrame:frame];
+    [self.wavesSV addSubview:testView];
+}
 -(void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
 }
