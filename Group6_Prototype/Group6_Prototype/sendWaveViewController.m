@@ -8,36 +8,40 @@
 
 #import "sendWaveViewController.h"
 #import "wavesViewController.h"
+#import "WaveView.h"
+#import "menuViewController.h"
 @interface sendWaveViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *waveTF;
 @property (weak, nonatomic) IBOutlet UIButton *sendWaveButton;
-@property (strong, nonatomic) NSString *wave;
 @end
-
 @implementation sendWaveViewController
-@synthesize waveTF;
 
 - (IBAction)sendWave:(UIButton *)sender {
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.waveTF.delegate = self;
+    NSLog(@"%@", self.wavesArray);
 }
 
 -(void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [self.waveTF resignFirstResponder];
-    return true;
-}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    self.wave = self.waveTF.text;
-    NSLog(@"Sender: %@",self.wave);
-
-    wavesViewController *waves = segue.destinationViewController;
-    waves.wave = self.wave;
+    if([[segue identifier] isEqualToString:@"wavesSegue"]){
+        wavesViewController *nextVC = segue.destinationViewController;
+        if(self.waveTF.text && self.waveTF.text.length > 0){
+            WaveView* wave = [[WaveView alloc] init];
+            wave.message = self.waveTF.text;
+            [self.wavesArray addObject:wave];
+        }else{
+            NSLog(@"empty text field");
+        }
+        nextVC.wavesArray = self.wavesArray;
+    }else if([[segue identifier] isEqualToString:@"menuSegue"]){
+        menuViewController *nextVC = segue.destinationViewController;
+        nextVC.wavesArray = self.wavesArray;
+    }
 }
 @end

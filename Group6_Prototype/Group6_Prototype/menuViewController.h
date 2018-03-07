@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface menuViewController : UIViewController
+@property (strong, nonatomic) NSMutableArray *wavesArray;
 
 @end

@@ -7,10 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "WaveView.h"
-
+#import "homeViewController.h"
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *enter;
+
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *circles;
 @property (nonatomic) int tracker;
 
@@ -26,21 +25,25 @@
     if(self.tracker<5){
         for(int i=0; i<self.tracker; i++){
             UIImageView *current = self.circles[i];
-            current.alpha = 1.0;
+            current.alpha = 0.75;
         }
     }
 
     if(self.tracker==4){
-        self.enter.hidden = NO;
+        [self performSegueWithIdentifier:@"homeSegue" sender:self];
     }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSMutableArray* waves = [[NSMutableArray alloc] init];
+    self.wavesArray = waves;
     self.tracker = 0;
-    self.enter.hidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
 }
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    homeViewController *waves = segue.destinationViewController;
+    waves.wavesArray = self.wavesArray;
+}
 
 @end

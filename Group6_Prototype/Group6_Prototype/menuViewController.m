@@ -7,7 +7,10 @@
 //
 
 #import "menuViewController.h"
-
+#import "wavesViewController.h"
+#import "homeViewController.h"
+#import "sendWaveViewController.h"
+#import "relaxViewController.h"
 @interface menuViewController ()
 
 @end
@@ -16,12 +19,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%@", self.wavesArray);
+
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue identifier] isEqualToString:@"wavesSegue"]){
+        wavesViewController *nextVC = segue.destinationViewController;
+        nextVC.wavesArray = self.wavesArray;
+    }else if([[segue identifier] isEqualToString:@"sendWaveSegue"]){
+        sendWaveViewController *nextVC = segue.destinationViewController;
+        nextVC.wavesArray = self.wavesArray;
+    }else if([[segue identifier] isEqualToString:@"homeSegue"]){
+        homeViewController *nextVC = segue.destinationViewController;
+        nextVC.wavesArray = self.wavesArray;
+    }else if([[segue identifier] isEqualToString:@"relaxSegue"]){
+        relaxViewController *nextVC = segue.destinationViewController;
+        nextVC.wavesArray = self.wavesArray;
+    }
 }
 
 /*

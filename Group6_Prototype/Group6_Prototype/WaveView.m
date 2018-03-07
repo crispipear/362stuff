@@ -15,11 +15,11 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     CGRect frame2 = CGRectMake(25, 0, 350, 75);
-    UILabel *testLabel = [[UILabel alloc] initWithFrame:frame2];
-    testLabel.font=[UIFont boldSystemFontOfSize:15.0];
-    testLabel.textColor = [UIColor whiteColor];
-    testLabel.text = self.message;
-    [self addSubview:testLabel];}
-
-
+    UILabel *label = [[UILabel alloc] initWithFrame:frame2];
+    label.font=[UIFont fontWithName:@"HelveticaNeue-Light" size:18];
+    label.textColor = [UIColor whiteColor];
+    label.text = self.message;
+    [self addSubview:label];
+    
+}
 @end

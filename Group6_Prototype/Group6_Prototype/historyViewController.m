@@ -7,7 +7,7 @@
 //
 
 #import "historyViewController.h"
-
+#import "menuViewController.h"
 @interface historyViewController ()
 
 @end
@@ -23,7 +23,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    menuViewController *nextVC = segue.destinationViewController;
+    nextVC.wavesArray = self.wavesArray;
+}
 /*
 #pragma mark - Navigation
 

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface homeViewController : UIViewController
+@property (strong, nonatomic) NSMutableArray *wavesArray;
 
 @end

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface historyViewController : UIViewController
+@property (strong, nonatomic) NSMutableArray *wavesArray;
 
 @end

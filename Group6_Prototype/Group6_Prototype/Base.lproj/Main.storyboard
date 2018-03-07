@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="SKr-YF-tFf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="cjn-4X-mlx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -69,17 +69,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AZc-lO-vk0">
-                                <rect key="frame" x="17" y="618" width="55" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="&lt;back">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="fha-ee-VNs" kind="modal" id="tqr-xi-ZGh"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ENTER YOUR PIN CODE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VU8-9F-uCm">
                                 <rect key="frame" x="0.0" y="86" width="375" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -177,26 +166,15 @@
                                     <action selector="clicked:" destination="cjn-4X-mlx" eventType="touchUpInside" id="chB-oh-6ME"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eDs-3C-f0o">
-                                <rect key="frame" x="293" y="618" width="66" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="enter&gt;">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hlo-Rd-Yxc" kind="modal" id="Lzd-Pe-YwL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
-                        <outlet property="enter" destination="eDs-3C-f0o" id="hZU-B8-Tj8"/>
                         <outletCollection property="circles" destination="CYM-mc-M6F" id="xz9-FM-m0T"/>
                         <outletCollection property="circles" destination="2wI-mO-W0S" id="QnM-JD-WcK"/>
                         <outletCollection property="circles" destination="Umw-3f-FGL" id="UaD-r6-InF"/>
                         <outletCollection property="circles" destination="GK8-Hb-8ce" id="Q5U-sU-1o4"/>
+                        <segue destination="hlo-Rd-Yxc" kind="modal" identifier="homeSegue" id="xxG-3R-aCT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HGG-vF-djK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -244,7 +222,7 @@
                                 <rect key="frame" x="8" y="10" width="37" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="KVV-yQ-T1C" kind="modal" id="nU0-G4-0Rp"/>
+                                    <segue destination="KVV-yQ-T1C" kind="modal" identifier="menuSegue" id="nU0-G4-0Rp"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="buttons" id="5WV-rc-2Gn">
@@ -255,21 +233,21 @@
                                 <rect key="frame" x="100" y="376" width="174" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="THf-9u-4Jq" kind="modal" id="YSt-n7-guS"/>
+                                    <segue destination="THf-9u-4Jq" kind="modal" identifier="sendWaveSegue" id="YSt-n7-guS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4bw-Zm-mDB">
                                 <rect key="frame" x="100" y="438" width="174" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="SKr-YF-tFf" kind="modal" id="QjF-a7-d5l"/>
+                                    <segue destination="SKr-YF-tFf" kind="modal" identifier="wavesSegue" id="QjF-a7-d5l"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sRE-Zw-UDt">
                                 <rect key="frame" x="100" y="497" width="174" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="Nis-h4-L4j" kind="modal" id="Cx3-qn-CG9"/>
+                                    <segue destination="Nis-h4-L4j" kind="modal" identifier="historySegue" id="Cx3-qn-CG9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -278,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Hf-7i-nZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1387.5" y="-665.5"/>
+            <point key="canvasLocation" x="-1306" y="-527"/>
         </scene>
         <!--nav-->
         <scene sceneID="YQb-x8-yF9">
@@ -304,7 +282,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hlo-Rd-Yxc" kind="modal" id="6eI-N1-hf4"/>
+                                    <segue destination="hlo-Rd-Yxc" kind="modal" identifier="homeSegue" id="6eI-N1-hf4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="L3a-C0-TE6">
@@ -315,7 +293,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="THf-9u-4Jq" kind="modal" id="wZI-G1-i8K"/>
+                                    <segue destination="THf-9u-4Jq" kind="modal" identifier="sendWaveSegue" id="wZI-G1-i8K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UbZ-Hh-frU">
@@ -326,7 +304,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="SKr-YF-tFf" kind="modal" id="I2e-8x-Vq4"/>
+                                    <segue destination="SKr-YF-tFf" kind="modal" identifier="wavesSegue" id="I2e-8x-Vq4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f3j-h8-ny8">
@@ -337,7 +315,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2Oc-9r-uyd" kind="modal" id="z9D-kB-T9s"/>
+                                    <segue destination="2Oc-9r-uyd" kind="modal" identifier="relaxSegue" id="z9D-kB-T9s"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -368,7 +346,7 @@
                                 <rect key="frame" x="8" y="10" width="37" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="KVV-yQ-T1C" kind="modal" id="UmO-YR-lWK"/>
+                                    <segue destination="KVV-yQ-T1C" kind="modal" identifier="menuSegue" id="UmO-YR-lWK"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sendwave" id="sPh-sR-rcX">
@@ -380,7 +358,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="sendWave:" destination="THf-9u-4Jq" eventType="touchUpInside" id="YkP-gP-4uC"/>
-                                    <segue destination="SKr-YF-tFf" kind="modal" id="anZ-wL-9kP"/>
+                                    <segue destination="SKr-YF-tFf" kind="modal" identifier="wavesSegue" id="anZ-wL-9kP"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="9Yp-Zd-q0Q">
@@ -413,7 +391,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9k2-YB-8je" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="9mZ-d1-VHN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-884.5" y="-666.5"/>
+            <point key="canvasLocation" x="-642" y="-639"/>
         </scene>
         <!--waves-->
         <scene sceneID="KB3-ls-bjU">
@@ -435,7 +413,7 @@
                                 <rect key="frame" x="8" y="10" width="37" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="KVV-yQ-T1C" kind="modal" id="DEu-Dt-2Kr"/>
+                                    <segue destination="KVV-yQ-T1C" kind="modal" identifier="menuSegue" id="DEu-Dt-2Kr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="W A V E S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J2C-hy-t1a">
@@ -480,7 +458,7 @@
                                 <rect key="frame" x="8" y="10" width="37" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="KVV-yQ-T1C" kind="modal" id="zCO-4Y-2FF"/>
+                                    <segue destination="KVV-yQ-T1C" kind="modal" identifier="menuSegue" id="zCO-4Y-2FF"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Give your mind a break" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TCs-hC-W5D">
@@ -500,7 +478,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FeS-In-9vJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1388" y="174"/>
+            <point key="canvasLocation" x="-1447" y="690"/>
         </scene>
         <!--history-->
         <scene sceneID="JKL-m7-6yA">
@@ -522,7 +500,7 @@
                                 <rect key="frame" x="8" y="10" width="37" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="KVV-yQ-T1C" kind="modal" id="Odu-V6-Yzk"/>
+                                    <segue destination="KVV-yQ-T1C" kind="modal" identifier="menuSegue" id="Odu-V6-Yzk"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your waves" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K4R-JG-zu1">
@@ -542,7 +520,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtk-DO-HJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-884" y="174"/>
+            <point key="canvasLocation" x="-865" y="665"/>
         </scene>
     </scenes>
     <resources>
@@ -557,10 +535,9 @@
         <image name="sendwave" width="192" height="59"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bRf-cC-pFl"/>
-        <segue reference="QjF-a7-d5l"/>
+        <segue reference="I2e-8x-Vq4"/>
         <segue reference="YSt-n7-guS"/>
-        <segue reference="nU0-G4-0Rp"/>
-        <segue reference="6eI-N1-hf4"/>
+        <segue reference="zCO-4Y-2FF"/>
+        <segue reference="xxG-3R-aCT"/>
     </inferredMetricsTieBreakers>
 </document>

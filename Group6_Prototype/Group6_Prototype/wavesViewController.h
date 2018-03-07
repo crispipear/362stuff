@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface wavesViewController : UIViewController
-@property (strong, nonatomic) NSString *wave;
-@property (strong, nonatomic) 
+@property (strong, nonatomic) NSMutableArray *wavesArray;
 @end
