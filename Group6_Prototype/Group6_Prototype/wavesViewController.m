@@ -19,12 +19,14 @@
     [super viewDidLoad];
     [self loadViews];
     NSLog(@"%@", self.wavesArray);
-    
+    [self.wavesSV setShowsVerticalScrollIndicator:NO];
 }
 - (void)loadViews
 {
     CGFloat posY = 0;
-    for(WaveView* waveObj in _wavesArray){
+    
+    for (WaveView *waveObj in [_wavesArray reverseObjectEnumerator]) {
+        
         CGRect frame = CGRectMake(0, posY, 300, 75);
         WaveView *wave = [[WaveView alloc] initWithFrame:frame];
         wave.message = waveObj.message;
@@ -34,15 +36,12 @@
         wave.layer.borderColor = [UIColor whiteColor].CGColor;
         [self.wavesSV addSubview:wave];
         posY += 100;
+        
     }
-//    CGRect frame = CGRectMake(0, 0, 300, 150);
-//    WaveView *testView = [[WaveView alloc] initWithFrame:frame];
-//    testView.backgroundColor = [UIColor clearColor];
-//    testView.layer.borderWidth = 1;
-//    testView.layer.cornerRadius = 15;
-//    testView.layer.borderColor = [UIColor whiteColor].CGColor;
-//    testView.message = self.wave;
-//    [self.wavesSV addSubview:testView];
+    
+    float contentHeight = posY + 75;
+    self.wavesSV.contentSize = CGSizeMake(self.wavesSV.frame.size.width, contentHeight);
+
     
 }
 -(void)didReceiveMemoryWarning{

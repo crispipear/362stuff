@@ -33,11 +33,11 @@
     }else if([[segue identifier] isEqualToString:@"sendWaveSegue"]){
         sendWaveViewController *nextVC = segue.destinationViewController;
         nextVC.wavesArray = self.wavesArray;
-    }else if([[segue identifier] isEqualToString:@"homeSegue"]){
-        homeViewController *nextVC = segue.destinationViewController;
-        nextVC.wavesArray = self.wavesArray;
     }else if([[segue identifier] isEqualToString:@"menuSegue"]){
         menuViewController *nextVC = segue.destinationViewController;
+        nextVC.wavesArray = self.wavesArray;
+    }else if([[segue identifier] isEqualToString:@"historySegue"]){
+        historyViewController *nextVC = segue.destinationViewController;
         nextVC.wavesArray = self.wavesArray;
     }
 }
