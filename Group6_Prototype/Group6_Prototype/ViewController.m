@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "homeViewController.h"
+#import "WaveView.h"
 @interface ViewController ()
 
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *circles;
@@ -36,9 +37,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSMutableArray* waves = [[NSMutableArray alloc] init];
-    self.wavesArray = waves;
+    self.wavesArray = [[NSMutableArray alloc] init];
     self.tracker = 0;
+    //generate fake wave messages
+    WaveView* wave1 = [[WaveView alloc] init];
+    wave1.message = @"Too much homework today!";
+    wave1.stressLevel = 2;
+    wave1.date = [NSDate date];
+    WaveView* wave2 = [[WaveView alloc] init];
+    wave2.message = @"I have failed my friends";
+    wave2.stressLevel = 3;
+    wave2.date = [NSDate date];
+    [self.wavesArray addObject:wave1];
+    [self.wavesArray addObject:wave2];
+
     // Do any additional setup after loading the view, typically from a nib.
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

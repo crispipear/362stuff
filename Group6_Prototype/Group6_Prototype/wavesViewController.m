@@ -26,20 +26,20 @@
     CGFloat posY = 0;
     
     for (WaveView *waveObj in [_wavesArray reverseObjectEnumerator]) {
-        
-        CGRect frame = CGRectMake(0, posY, 300, 75);
+        CGRect frame = CGRectMake(0, posY, 300, 125);
         WaveView *wave = [[WaveView alloc] initWithFrame:frame];
         wave.message = waveObj.message;
+        wave.date = waveObj.date;
+        wave.stressLevel = waveObj.stressLevel;
         wave.backgroundColor = [UIColor clearColor];
         wave.layer.borderWidth = 1;
         wave.layer.cornerRadius = 15;
         wave.layer.borderColor = [UIColor whiteColor].CGColor;
         [self.wavesSV addSubview:wave];
-        posY += 100;
-        
+        posY += 150;
     }
     
-    float contentHeight = posY + 75;
+    float contentHeight = posY;
     self.wavesSV.contentSize = CGSizeMake(self.wavesSV.frame.size.width, contentHeight);
 
     

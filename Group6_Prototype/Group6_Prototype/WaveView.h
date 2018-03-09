@@ -11,6 +11,6 @@
 @interface WaveView : UIView
 @property (strong, nonatomic) NSString *message;
 @property (nonatomic) int stressLevel;
-@property (strong, nonatomic) NSDate *time;
+@property (strong, nonatomic) NSDate *date;
 
 @end

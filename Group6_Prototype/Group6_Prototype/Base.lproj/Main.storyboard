@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="cjn-4X-mlx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="fha-ee-VNs">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -364,7 +364,6 @@
                                 <rect key="frame" x="104" y="509" width="167" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="sendWave:" destination="THf-9u-4Jq" eventType="touchUpInside" id="YkP-gP-4uC"/>
                                     <segue destination="SKr-YF-tFf" kind="modal" identifier="wavesSegue" id="anZ-wL-9kP"/>
                                 </connections>
                             </button>
@@ -374,11 +373,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="tfValueChanged:" destination="THf-9u-4Jq" eventType="valueChanged" id="SH6-jx-TMW"/>
-                                    <action selector="waveTF:" destination="9mZ-d1-VHN" eventType="editingDidEnd" id="VTL-jx-HyE"/>
-                                    <action selector="waveTF:" destination="9mZ-d1-VHN" eventType="valueChanged" id="oMc-4o-Z66"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="what is your wave level?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DHt-pI-P3l">
                                 <rect key="frame" x="0.0" y="296" width="375" height="61"/>
@@ -410,33 +404,51 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AqP-h2-pOM">
                                 <rect key="frame" x="96" y="361" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="waveLevel1:" destination="THf-9u-4Jq" eventType="touchUpInside" id="c4Y-zA-bdp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NLK-V0-TfP">
                                 <rect key="frame" x="134" y="361" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="wavelevel2:" destination="THf-9u-4Jq" eventType="touchUpInside" id="fDN-9m-Cm1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PYZ-Pb-oJ3">
                                 <rect key="frame" x="172" y="361" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="wavelevel3:" destination="THf-9u-4Jq" eventType="touchUpInside" id="JDA-z0-W7l"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="95C-bU-DS0">
                                 <rect key="frame" x="210" y="361" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="wavelevel4:" destination="THf-9u-4Jq" eventType="touchUpInside" id="d3x-P8-i9J"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d3C-SN-Acv">
                                 <rect key="frame" x="248" y="361" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="wavelevel5:" destination="THf-9u-4Jq" eventType="touchUpInside" id="JiM-ij-xZf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
-                        <outlet property="sendWaveButton" destination="DXT-Tq-Ond" id="H91-j0-adj"/>
-                        <outlet property="waveTF" destination="9Yp-Zd-q0Q" id="Wcw-cX-piK"/>
+                        <outlet property="waveIcon1" destination="CLK-Ip-M4i" id="3v7-5g-MEn"/>
+                        <outlet property="waveIcon2" destination="9RA-DB-he4" id="puA-79-Y3M"/>
+                        <outlet property="waveIcon3" destination="Qev-wI-z8Q" id="JgF-bj-rmc"/>
+                        <outlet property="waveIcon4" destination="IPu-wQ-cLq" id="4mC-yx-15z"/>
+                        <outlet property="waveIcon5" destination="Iv7-1l-orS" id="0tD-Ae-2bV"/>
+                        <outlet property="waveTF" destination="9Yp-Zd-q0Q" id="wY8-Ee-ULe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9k2-YB-8je" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="9mZ-d1-VHN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-642.5" y="-639.5"/>
         </scene>
@@ -589,7 +601,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="anZ-wL-9kP"/>
         <segue reference="YSt-n7-guS"/>
-        <segue reference="DEu-Dt-2Kr"/>
+        <segue reference="UmO-YR-lWK"/>
         <segue reference="xxG-3R-aCT"/>
     </inferredMetricsTieBreakers>
 </document>

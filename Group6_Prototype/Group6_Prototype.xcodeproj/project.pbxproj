@@ -13,7 +13,7 @@
 		B8A10C63204FAB5700184262 /* wavesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A10C5A204FAB5700184262 /* wavesViewController.m */; };
 		B8A10C64204FAB5700184262 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A10C5B204FAB5700184262 /* ViewController.m */; };
 		B8A10C65204FAB5700184262 /* menuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A10C5C204FAB5700184262 /* menuViewController.m */; };
-		B8A10C66204FAB5700184262 /* sendWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A10C5D204FAB5700184262 /* sendWaveViewController.m */; };
+		B8B18D5C205248DD0036A64D /* sendWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B18D5B205248DD0036A64D /* sendWaveViewController.m */; };
 		B8FFC15E2032BC7300F3247D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FFC15D2032BC7300F3247D /* AppDelegate.m */; };
 		B8FFC1642032BC7400F3247D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FFC1622032BC7400F3247D /* Main.storyboard */; };
 		B8FFC1692032BC7400F3247D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FFC1672032BC7400F3247D /* LaunchScreen.storyboard */; };
@@ -24,7 +24,6 @@
 
 /* Begin PBXFileReference section */
 		B8A10C52204FAB5600184262 /* relaxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = relaxViewController.m; sourceTree = "<group>"; };
-		B8A10C53204FAB5600184262 /* sendWaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sendWaveViewController.h; sourceTree = "<group>"; };
 		B8A10C54204FAB5600184262 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B8A10C55204FAB5600184262 /* historyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = historyViewController.h; sourceTree = "<group>"; };
 		B8A10C56204FAB5600184262 /* homeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
@@ -34,9 +33,10 @@
 		B8A10C5A204FAB5700184262 /* wavesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wavesViewController.m; sourceTree = "<group>"; };
 		B8A10C5B204FAB5700184262 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B8A10C5C204FAB5700184262 /* menuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = menuViewController.m; sourceTree = "<group>"; };
-		B8A10C5D204FAB5700184262 /* sendWaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sendWaveViewController.m; sourceTree = "<group>"; };
 		B8A10C5E204FAB5700184262 /* menuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menuViewController.h; sourceTree = "<group>"; };
 		B8A10C5F204FAB5700184262 /* wavesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wavesViewController.h; sourceTree = "<group>"; };
+		B8B18D5A205248DD0036A64D /* sendWaveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sendWaveViewController.h; sourceTree = "<group>"; };
+		B8B18D5B205248DD0036A64D /* sendWaveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sendWaveViewController.m; sourceTree = "<group>"; };
 		B8FFC1592032BC7300F3247D /* group6_prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = group6_prototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8FFC15C2032BC7300F3247D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8FFC15D2032BC7300F3247D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -79,6 +79,8 @@
 		B8FFC15B2032BC7300F3247D /* group6_prototype */ = {
 			isa = PBXGroup;
 			children = (
+				B8B18D5A205248DD0036A64D /* sendWaveViewController.h */,
+				B8B18D5B205248DD0036A64D /* sendWaveViewController.m */,
 				B8A10C55204FAB5600184262 /* historyViewController.h */,
 				B8A10C58204FAB5700184262 /* historyViewController.m */,
 				B8A10C56204FAB5600184262 /* homeViewController.h */,
@@ -87,8 +89,6 @@
 				B8A10C5C204FAB5700184262 /* menuViewController.m */,
 				B8A10C59204FAB5700184262 /* relaxViewController.h */,
 				B8A10C52204FAB5600184262 /* relaxViewController.m */,
-				B8A10C53204FAB5600184262 /* sendWaveViewController.h */,
-				B8A10C5D204FAB5700184262 /* sendWaveViewController.m */,
 				B8A10C5F204FAB5700184262 /* wavesViewController.h */,
 				B8A10C5A204FAB5700184262 /* wavesViewController.m */,
 				B8A10C54204FAB5600184262 /* ViewController.h */,
@@ -182,7 +182,7 @@
 				B8A10C62204FAB5700184262 /* historyViewController.m in Sources */,
 				B8A10C64204FAB5700184262 /* ViewController.m in Sources */,
 				B8FFC16C2032BC7400F3247D /* main.m in Sources */,
-				B8A10C66204FAB5700184262 /* sendWaveViewController.m in Sources */,
+				B8B18D5C205248DD0036A64D /* sendWaveViewController.m in Sources */,
 				B8FFC15E2032BC7300F3247D /* AppDelegate.m in Sources */,
 				B8A10C61204FAB5700184262 /* homeViewController.m in Sources */,
 				B8A10C63204FAB5700184262 /* wavesViewController.m in Sources */,
