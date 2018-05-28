@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B8FFC1582032BC7300F3247D"
-               BuildableName = "group6_prototype.app"
+               BuildableName = "Waves.app"
                BlueprintName = "group6_prototype"
                ReferencedContainer = "container:Waves.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B8FFC1582032BC7300F3247D"
-            BuildableName = "group6_prototype.app"
+            BuildableName = "Waves.app"
             BlueprintName = "group6_prototype"
             ReferencedContainer = "container:Waves.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B8FFC1582032BC7300F3247D"
-            BuildableName = "group6_prototype.app"
+            BuildableName = "Waves.app"
             BlueprintName = "group6_prototype"
             ReferencedContainer = "container:Waves.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B8FFC1582032BC7300F3247D"
-            BuildableName = "group6_prototype.app"
+            BuildableName = "Waves.app"
             BlueprintName = "group6_prototype"
             ReferencedContainer = "container:Waves.xcodeproj">
          </BuildableReference>

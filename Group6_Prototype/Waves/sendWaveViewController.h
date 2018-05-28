@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface sendWaveViewController : UIViewController
+@interface sendWaveViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) NSMutableArray *wavesArray;
 
 @end

@@ -26,8 +26,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"%@", self.wavesArray);
+    [_waveTF setDelegate:self];
 }
-
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
 -(void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
 }
